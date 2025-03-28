@@ -1,3 +1,22 @@
+document.addEventListener("DOMContentLoaded", function () {
+    let adFooter = document.createElement("div");
+    adFooter.className = "ads-container";
+    adFooter.innerHTML = `
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2811761116248604" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-2811761116248604"
+             data-ad-slot="9202542913"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    `;
+
+    let footer = document.querySelector("footer");
+    footer.insertAdjacentElement("beforebegin", adFooter);
+});
+
+
 function downloadContent() {
     let url = document.getElementById("url").value;
     if (!url) {
@@ -23,6 +42,25 @@ function downloadContent() {
     })
     .catch(error => console.error("Error:", error));
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let adContainer = document.createElement("div");
+    adContainer.className = "ads-container";
+    adContainer.innerHTML = `
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2811761116248604" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-2811761116248604"
+             data-ad-slot="9202542913"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    `;
+
+    let form = document.getElementById("downloadForm");
+    form.parentNode.insertBefore(adContainer, form);
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".category-buttons button");
@@ -53,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Membuat elemen notifikasi
     const notification = document.createElement("div");
     notification.classList.add("custom-notification");
     notification.innerHTML = `
@@ -65,15 +102,13 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.body.appendChild(notification);
 
-    // Event untuk menutup notifikasi
     document.getElementById("close-notif").addEventListener("click", function () {
         notification.classList.add("hide");
         setTimeout(() => notification.remove(), 300);
     });
 
-    // Event untuk tombol Hubungi
     document.getElementById("contact-btn").addEventListener("click", function () {
-        window.location.href = "https://arieldev-sigma.vercel.app/"; // Ganti dengan nomor WhatsApp atau email
+        window.location.href = "https://arieldev-sigma.vercel.app/";
     });
 
     // Menampilkan notifikasi dengan animasi
