@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
